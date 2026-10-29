@@ -1,17 +1,17 @@
-const cuentaForm = document.querySelector('#cuenta-form');
-const profileForm = document.querySelector('#profile-form');
-const cuentaMessage = document.querySelector('#cuenta-message');
-const toggle = document.querySelector('#cuenta-toggle');
+const cuentaForm = document.querySelector('#identificadorCuentaformulario');
+const profileForm = document.querySelector('#identificadorPerfilformulario');
+const cuentaMessage = document.querySelector('#identificadorCuentamensaje');
+const toggle = document.querySelector('#identificadorCuentaalternar');
 let registering = false;
 
 function showUser(user) {
   cuentaForm.hidden = !!user;
   toggle.hidden = !!user;
   profileForm.hidden = !user;
-  document.querySelector('#cuenta-heading').textContent = user ? 'Tu perfil' : 'Tu cuenta';
+  document.querySelector('#identificadorCuentatitulo').textContent = user ? 'Tu perfil' : 'Tu cuenta';
   if (user) {
     profileForm.elements.name.value = user.name;
-    document.querySelector('#profile-email').textContent = user.email;
+    document.querySelector('#identificadorPerfilcorreo').textContent = user.email;
   }
 }
 
@@ -26,10 +26,10 @@ async function request(path, data) {
 
 toggle.addEventListener('click', () => {
   registering = !registering;
-  document.querySelector('#name-field').hidden = !registering;
+  document.querySelector('#identificadorNombrecampo').hidden = !registering;
   cuentaForm.elements.name.required = registering;
   cuentaForm.elements.password.autocomplete = registering ? 'new-password' : 'current-password';
-  document.querySelector('#cuenta-submit').textContent = registering ? 'Crear cuenta' : 'Iniciar sesión';
+  document.querySelector('#identificadorCuentaenviar').textContent = registering ? 'Crear cuenta' : 'Iniciar sesión';
   toggle.textContent = registering ? 'Ya tengo una cuenta' : 'Crear una cuenta';
   cuentaMessage.textContent = '';
 });
@@ -50,7 +50,7 @@ profileForm.addEventListener('submit', async event => {
     cuentaMessage.textContent = 'Perfil actualizado.';
   } catch (error) { cuentaMessage.textContent = error.message; }
 });
-document.querySelector('#logout').addEventListener('click', async () => {
+document.querySelector('#identificadorSalir').addEventListener('click', async () => {
   try {
     await request('/api/logout', {});
     showUser(null);

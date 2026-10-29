@@ -33,3 +33,23 @@ El modelo incluye la bandeja SIM, una tapa trasera opaca de policarbonato, la bo
 ## Componentes de la torre
 
 El modelo incluye un panel lateral opaco de acero, la tarjeta gráfica, dos módulos de memoria RAM, el disipador y el ventilador del procesador, el procesador, una unidad SSD M.2, los ventiladores frontal y trasero, la placa base ATX y la fuente de poder. La guía también incluye los cables de alimentación y ventilación, además de la palanca de retención del procesador.
+
+## Cuenta y perfil
+
+Para utilizar el registro, el inicio de sesión y la edición del nombre del perfil, inicia el servidor incluido con Python 3:
+
+```sh
+python3 server.py
+```
+
+Abre `http://localhost:4173/` y utiliza la sección «Tu cuenta». La base de datos SQLite se crea automáticamente en `data/kingdog.sqlite3` y conserva las cuentas entre reinicios. Las contraseñas se almacenan como hashes con sal. Cerrar sesión invalida la sesión actual. Los simuladores siguen disponibles sin iniciar sesión; su progreso no se guarda en el perfil.
+
+El servidor estático anterior permite usar los simuladores, pero no las cuentas.
+
+## Seguridad y publicación
+
+Las solicitudes que modifican datos exigen un origen igual al de la página. Las cookies de sesión son HttpOnly y SameSite, y el servidor incluye cabeceras de seguridad. El registro y el inicio de sesión tienen un límite persistente de diez intentos por dirección de conexión y por correo durante quince minutos. El límite también cuenta los intentos correctos. Las contraseñas se protegen con PBKDF2 y sal, y los tokens de sesión se guardan como hashes.
+
+Para publicar el sitio, coloca un proxy inverso con un certificado HTTPS válido delante del servidor y configura `KINGDOG_PUBLIC_ORIGIN` con el origen público completo, por ejemplo `https://ejemplo.com`. En este modo las cookies llevan el atributo Secure y las solicitudes se comparan con ese origen. El servidor escucha solamente en 127.0.0.1 por defecto; no expongas su puerto HTTP a internet. El proxy debe redirigir HTTP a HTTPS y limitar el tamaño y la velocidad de las solicitudes. Configura además límites de intentos por IP real en el proxy: detrás de él, el límite interno ve la dirección del proxy y puede afectar a todos los usuarios. No se confía en cabeceras de IP enviadas por el cliente.
+
+Protege el archivo de la base de datos y sus copias de seguridad con permisos de acceso adecuados. Este servidor sencillo no sustituye una revisión profesional de seguridad ni incluye recuperación de contraseña, verificación de correo o autenticación multifactor. Antes de un despliegue público real, revisa también la configuración del proxy, las copias de seguridad y la monitorización.

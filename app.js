@@ -1,5 +1,6 @@
 (function(){
   "use strict";
+  var identificadores = {"app": "identificadorAplicacion", "atxConnector": "identificadorAtxconector", "battery": "identificadorBateria", "batteryConnector": "identificadorBateriaconector", "cameraConnector": "identificadorCamaraconector", "caseStage": "identificadorGabineteescenario", "chargingBoard": "identificadorCargaplaca", "cooler": "identificadorDisipador", "coolerFanConnector": "identificadorDisipadorventiladorconector", "cover": "identificadorTapa", "cpu": "identificadorProcesador", "cpuSocketConnector": "identificadorProcesadorzocaloconector", "cuenta-form": "identificadorCuentaformulario", "cuenta-heading": "identificadorCuentatitulo", "cuenta-message": "identificadorCuentamensaje", "cuenta-submit": "identificadorCuentaenviar", "cuenta-toggle": "identificadorCuentaalternar", "display": "identificadorPantalla", "displayConnector": "identificadorPantallaconector", "earpiece": "identificadorAuricular", "epsConnector": "identificadorEpsconector", "frontCamera": "identificadorFrontalcamara", "frontFan": "identificadorFrontalventilador", "frontFanConnector": "identificadorFrontalventiladorconector", "goalPill": "identificadorObjetivoindicador", "gpu": "identificadorGrafica", "gpuPowerConnector": "identificadorGraficaalimentacionconector", "hintBtn": "identificadorPistaboton", "infoTooltip": "identificadorInformacionayuda", "infoTooltipBody": "identificadorInformacionayudacuerpo", "infoTooltipTitle": "identificadorInformacionayudatitulo", "interconnectConnector": "identificadorInterconexionconector", "logout": "identificadorSalir", "mainboard": "identificadorPlacaprincipal", "messageBar": "identificadorMensajebarra", "midFrame": "identificadorMediomarco", "modeBtn": "identificadorModoboton", "modeBtnText": "identificadorModobotontexto", "modeLabel": "identificadorModoetiqueta", "motherboard": "identificadorPlacabase", "name-field": "identificadorNombrecampo", "nfcCoil": "identificadorNfcbobina", "pauseBtn": "identificadorPausaboton", "pauseOverlay": "identificadorPausasuperposicion", "pcApp": "identificadorComputadoraplicacion", "phoneStage": "identificadorTelefonoescenario", "playAgainBtn": "identificadorJugarnuevoboton", "profile-email": "identificadorPerfilcorreo", "profile-form": "identificadorPerfilformulario", "psu": "identificadorFuente", "ram1": "identificadorMemoria1", "ram2": "identificadorMemoria2", "rearCameras": "identificadorTraserocamaras", "rearFan": "identificadorTraseroventilador", "rearFanConnector": "identificadorTraseroventiladorconector", "resetBtn": "identificadorReinicioboton", "restartBtn": "identificadorReiniciarboton", "resumeBtn": "identificadorContinuarboton", "screw-board-br": "identificadorTornilloplacainferiorderecho", "screw-board-tl": "identificadorTornilloplacasuperiorizquierdo", "screw-charge-left": "identificadorTornillocargaizquierdo", "screw-charge-right": "identificadorTornillocargaderecho", "screw-cooler-a": "identificadorTornillodisipadora", "screw-cooler-b": "identificadorTornillodisipadorb", "screw-cooler-c": "identificadorTornillodisipadorc", "screw-cooler-d": "identificadorTornillodisipadord", "screw-cover-bl": "identificadorTornillotapainferiorizquierdo", "screw-cover-br": "identificadorTornillotapainferiorderecho", "screw-cover-tl": "identificadorTornillotapasuperiorizquierdo", "screw-cover-tr": "identificadorTornillotapasuperiorderecho", "screw-frame-bl": "identificadorTornillomarcoinferiorizquierdo", "screw-frame-br": "identificadorTornillomarcoinferiorderecho", "screw-frame-tl": "identificadorTornillomarcosuperiorizquierdo", "screw-frame-tr": "identificadorTornillomarcosuperiorderecho", "screw-front-a": "identificadorTornillofrontala", "screw-front-b": "identificadorTornillofrontalb", "screw-gpu-a": "identificadorTornillograficaa", "screw-gpu-b": "identificadorTornillograficab", "screw-mobo-a": "identificadorTornilloplacaa", "screw-mobo-b": "identificadorTornilloplacab", "screw-mobo-c": "identificadorTornilloplacac", "screw-mobo-d": "identificadorTornilloplacad", "screw-mobo-e": "identificadorTornilloplacae", "screw-mobo-f": "identificadorTornilloplacaf", "screw-panel-a": "identificadorTornillopanela", "screw-panel-b": "identificadorTornillopanelb", "screw-psu-a": "identificadorTornillofuentea", "screw-psu-b": "identificadorTornillofuenteb", "screw-psu-c": "identificadorTornillofuentec", "screw-psu-d": "identificadorTornillofuented", "screw-rear-a": "identificadorTornillotraseroa", "screw-rear-b": "identificadorTornillotraserob", "screw-speaker-left": "identificadorTornilloaltavozizquierdo", "screw-speaker-right": "identificadorTornilloaltavozderecho", "screw-ssd-a": "identificadorTornillossda", "sideFlex": "identificadorLateralflexible", "sideFlexConnector": "identificadorLateralflexibleconector", "sidePanel": "identificadorLateralpanel", "simTray": "identificadorSimbandeja", "soundBtn": "identificadorSonidoboton", "soundWaves": "identificadorSonidoondas", "speaker": "identificadorAltavoz", "ssd": "identificadorSsd", "stepPill": "identificadorPasoindicador", "successOverlay": "identificadorExitosuperposicion", "successStats": "identificadorExitoestadisticas", "successText": "identificadorExitotexto", "successTitle": "identificadorExitotitulo", "themeBtn": "identificadorTemaboton", "timerPill": "identificadorCronometroindicador", "toolHand": "identificadorHerramientamano", "toolScrewdriver": "identificadorHerramientadestornillador", "toolSpatula": "identificadorHerramientaespatula", "topSensors": "identificadorSuperiorsensores", "topSensorsConnector": "identificadorSuperiorsensoresconector", "tray-screws": "identificadorBandejatornillos", "trayEmpty": "identificadorBandejavacio", "trayList": "identificadorBandejalista", "vibrator": "identificadorVibrador", "workbench": "identificadorTrabajo", "xrayBtn": "identificadorRayosboton"};
 
   /* =====================================================================
    *  Kingdog · Simulador de reparación de smartphone modular
@@ -12,7 +13,7 @@
     get: function(k, d){ try { var v = localStorage.getItem(k); return v === null ? d : v; } catch(e){ return d; } },
     set: function(k, v){ try { localStorage.setItem(k, v); } catch(e){} }
   };
-  function $(id){ return document.getElementById(id); }
+  function $(id){ return document.getElementById(identificadores[id] || id); }
   function fmtTime(ms){
     var s = Math.floor(ms / 1000);
     var m = Math.floor(s / 60);
@@ -67,7 +68,7 @@
     goalPill: $('goalPill'),
     stepPill: $('stepPill'),
     timerPill: $('timerPill'),
-    trayPanel: document.querySelector('.tray-panel'),
+    trayPanel: document.querySelector('.claseBandejapanel'),
     trayList: $('trayList'),
     trayEmpty: $('trayEmpty'),
     pauseOverlay: $('pauseOverlay'),
@@ -213,8 +214,8 @@
     els.infoTooltipTitle.textContent = title;
     els.infoTooltipBody.textContent = description;
     els.infoTooltip.setAttribute('aria-hidden', 'false');
-    els.infoTooltip.classList.add('visible');
-    el.setAttribute('aria-describedby', 'infoTooltip');
+    els.infoTooltip.classList.add('claseVisible');
+    el.setAttribute('aria-describedby', 'identificadorInformacionayuda');
     positionInfoTooltip(x, y);
   }
   function hideInfoTooltip(el){
@@ -222,7 +223,7 @@
     if (tooltipTarget) tooltipTarget.removeAttribute('aria-describedby');
     tooltipTarget = null;
     els.infoTooltip.setAttribute('aria-hidden', 'true');
-    els.infoTooltip.classList.remove('visible');
+    els.infoTooltip.classList.remove('claseVisible');
   }
   function bindInfoTooltip(el, title, description){
     if (!el || !description) return;
@@ -672,8 +673,8 @@
   }
 
   function clearHintTargets(){
-    var list = document.querySelectorAll('.xray-target');
-    for (var i = 0; i < list.length; i++) list[i].classList.remove('xray-target');
+    var list = document.querySelectorAll('.claseRayosobjetivo');
+    for (var i = 0; i < list.length; i++) list[i].classList.remove('claseRayosobjetivo');
   }
   function updateHintTargets(){
     clearHintTargets();
@@ -681,7 +682,7 @@
     var steps = currentSteps();
     var idx = currentStepIndex();
     if (idx >= steps.length) return;
-    steps[idx].targets().forEach(function(el){ if (el) el.classList.add('xray-target'); });
+    steps[idx].targets().forEach(function(el){ if (el) el.classList.add('claseRayosobjetivo'); });
   }
 
   // ---------- Cronómetro y estadísticas ----------
@@ -707,19 +708,19 @@
   function trayEl(id){ return trayItems[id] || null; }
 
   function refreshTrayEmpty(){
-    var has = els.trayList.querySelector('.tray-item');
+    var has = els.trayList.querySelector('.claseBandejaelemento');
     els.trayEmpty.style.display = has ? 'none' : '';
   }
 
   function addTrayScrew(){
     var existing = $('tray-screws');
     if (existing) {
-      existing.querySelector('.count').textContent = '×' + state.trayScrewCount;
+      existing.querySelector('.claseCantidad').textContent = '×' + state.trayScrewCount;
     } else {
       var item = document.createElement('div');
-      item.className = 'tray-item';
-      item.id = 'tray-screws';
-      item.innerHTML = '<span class="swatch" style="background:var(--copper)"></span><span>Tornillos</span><span class="count mono">×' + state.trayScrewCount + '</span>';
+      item.className = 'claseBandejaelemento';
+      item.id = 'identificadorBandejatornillos';
+      item.innerHTML = '<span class="claseMuestra" style="background:var(--copper)"></span><span>Tornillos</span><span class="claseCantidad claseMonoespacio">×' + state.trayScrewCount + '</span>';
       bindInfoTooltip(item, 'Tornillos', 'Fijaciones retiradas del teléfono. Reinstálalas en sus orificios con el destornillador.');
       els.trayList.appendChild(item);
     }
@@ -729,7 +730,7 @@
     var existing = $('tray-screws');
     if (!existing) return;
     if (state.trayScrewCount <= 0) existing.parentNode.removeChild(existing);
-    else existing.querySelector('.count').textContent = '×' + state.trayScrewCount;
+    else existing.querySelector('.claseCantidad').textContent = '×' + state.trayScrewCount;
     refreshTrayEmpty();
   }
 
@@ -737,11 +738,11 @@
     if (trayItems[id]) return;
     var part = parts[id];
     var item = document.createElement('div');
-    item.className = 'tray-item piece';
+    item.className = 'claseBandejaelemento clasePieza';
     item.tabIndex = 0;
     item.setAttribute('role', 'button');
     item.setAttribute('aria-label', part.label + ': arrastra para volver a instalar');
-    item.innerHTML = '<span class="swatch" style="background:' + part.color + '"></span><span>' + part.label + '</span><span class="grip" aria-hidden="true">⠿</span>';
+    item.innerHTML = '<span class="claseMuestra" style="background:' + part.color + '"></span><span>' + part.label + '</span><span class="claseAgarre" aria-hidden="true">⠿</span>';
     bindInfoTooltip(item, part.label, PART_INFO[id]);
     item.addEventListener('pointerdown', function(e){
       if (state.paused || e.button > 0) return;
@@ -764,17 +765,17 @@
   // ---------- Feedback visual ----------
   function flashBlocked(el){
     registerError();
-    el.classList.remove('blocked-shake');
+    el.classList.remove('claseBloqueadosacudida');
     void el.offsetWidth;
-    el.classList.add('blocked-shake');
+    el.classList.add('claseBloqueadosacudida');
     sndError();
-    setTimeout(function(){ el.classList.remove('blocked-shake'); }, 420);
+    setTimeout(function(){ el.classList.remove('claseBloqueadosacudida'); }, 420);
   }
   function flashBlockers(list){
     list.forEach(function(el){
       if (!el) return;
-      el.classList.add('blocker-flash');
-      setTimeout(function(){ el.classList.remove('blocker-flash'); }, 900);
+      el.classList.add('claseObstaculodestello');
+      setTimeout(function(){ el.classList.remove('claseObstaculodestello'); }, 900);
     });
   }
 
@@ -782,14 +783,14 @@
   function selectTool(tool){
     state.tool = tool;
     els.app.setAttribute('data-tool', tool);
-    var btns = document.querySelectorAll('.tool-btn');
+    var btns = document.querySelectorAll('.claseHerramientaboton');
     for (var i = 0; i < btns.length; i++) {
       var on = btns[i].getAttribute('data-tool') === tool;
-      btns[i].classList.toggle('selected', on);
+      btns[i].classList.toggle('claseSeleccionado', on);
       btns[i].setAttribute('aria-pressed', on ? 'true' : 'false');
     }
   }
-  var toolBtns = document.querySelectorAll('.tool-btn');
+  var toolBtns = document.querySelectorAll('.claseHerramientaboton');
   for (var tb = 0; tb < toolBtns.length; tb++) {
     (function(btn){
       btn.addEventListener('click', function(){ selectTool(btn.getAttribute('data-tool')); });
@@ -814,33 +815,33 @@
       if (installing && state.trayScrewCount <= 0) return;
       holding = true;
       el.style.setProperty('--hold', HOLD_MS + 'ms');
-      el.classList.toggle('reverse', installing);
-      el.classList.add('spinning');
+      el.classList.toggle('claseReversa', installing);
+      el.classList.add('claseGirando');
       try { el.setPointerCapture(e.pointerId); } catch(err){}
       holdTimer = setTimeout(function(){ holdTimer = null; holding = false; finishScrew(id, el, installing); }, HOLD_MS);
     });
     function cancel(){
       if (holdTimer) { clearTimeout(holdTimer); holdTimer = null; }
-      if (holding) { holding = false; el.classList.remove('spinning', 'reverse'); }
+      if (holding) { holding = false; el.classList.remove('claseGirando', 'claseReversa'); }
     }
     el.addEventListener('pointerup', cancel);
     el.addEventListener('pointerleave', cancel);
     el.addEventListener('pointercancel', cancel);
   }
   function finishScrew(id, el, installing){
-    el.classList.remove('spinning', 'reverse');
+    el.classList.remove('claseGirando', 'claseReversa');
     if (installing) {
       if (state.screws[id] || state.trayScrewCount <= 0) return;
       state.screws[id] = true;
       state.trayScrewCount--;
-      el.classList.remove('gone');
+      el.classList.remove('claseAusente');
       removeTrayScrew();
       sndScrewIn();
     } else {
       if (!state.screws[id]) return;
       state.screws[id] = false;
       state.trayScrewCount++;
-      el.classList.add('gone');
+      el.classList.add('claseAusente');
       addTrayScrew();
       sndScrewOut();
     }
@@ -874,7 +875,7 @@
     }
     startClock();
     state.connections[key] = !state.connections[key];
-    el.classList.toggle('disconnected', !state.connections[key]);
+    el.classList.toggle('claseDesconectado', !state.connections[key]);
     el.setAttribute('aria-pressed', state.connections[key] ? 'true' : 'false');
     el.setAttribute('aria-label', 'Flex de ' + CONNECTOR_LABELS[key] + ', ' + (state.connections[key] ? 'conectado' : 'desconectado'));
     if (state.connections[key]) sndClipIn(); else sndClip();
@@ -902,10 +903,10 @@
     g.removeAttribute('id');
     var kids = g.querySelectorAll('[id]');
     for (var i = 0; i < kids.length; i++) kids[i].removeAttribute('id');
-    g.classList.remove('part-removed', 'slot-ok', 'slot-bad', 'xray-target', 'blocked-shake');
-    var kidsX = g.querySelectorAll('.xray-target');
-    for (var j = 0; j < kidsX.length; j++) kidsX[j].classList.remove('xray-target');
-    g.classList.add('drag-ghost');
+    g.classList.remove('clasePiezaretirada', 'claseRanuracorrecto', 'claseRanuramalo', 'claseRayosobjetivo', 'claseBloqueadosacudida');
+    var kidsX = g.querySelectorAll('.claseRayosobjetivo');
+    for (var j = 0; j < kidsX.length; j++) kidsX[j].classList.remove('claseRayosobjetivo');
+    g.classList.add('claseArrastrefantasma');
     g.style.left = rect.left + 'px';
     g.style.top = rect.top + 'px';
     g.style.width = rect.width + 'px';
@@ -932,13 +933,13 @@
     var scale = part.carryScale;
 
     startClock();
-    if (!fromTray) el.classList.add('part-removed');
+    if (!fromTray) el.classList.add('clasePiezaretirada');
     ghost.style.transition = 'scale 0.15s ease';
     ghost.style.scale = String(scale);
     el.style.cursor = '';
 
     carrying = { id: id, ghost: ghost, pointerId: e.pointerId };
-    if (!fromTray) els.workbench.classList.add('drop-active');
+    if (!fromTray) els.workbench.classList.add('claseSoltaractivo');
 
     var tolerance = Math.max(50, Math.min(rect.width, rect.height) * 0.5);
     var lastX = e.clientX, lastY = e.clientY;
@@ -973,8 +974,8 @@
       return Math.hypot(c.x - cx, c.y - cy) < tolerance;
     }
     function setSlot(cls){
-      el.classList.toggle('slot-ok', cls === 'ok');
-      el.classList.toggle('slot-bad', cls === 'bad');
+      el.classList.toggle('claseRanuracorrecto', cls === 'ok');
+      el.classList.toggle('claseRanuramalo', cls === 'bad');
     }
 
     function onMove(ev){
@@ -984,8 +985,8 @@
         if (nearSlot()) setSlot(part.installBlock() ? 'bad' : 'ok');
         else setSlot(null);
       } else {
-        els.trayPanel.classList.toggle('drop-ok', overTray());
-        els.workbench.classList.toggle('drop-ok', overWorkbenchSpace());
+        els.trayPanel.classList.toggle('claseSoltarcorrecto', overTray());
+        els.workbench.classList.toggle('claseSoltarcorrecto', overWorkbenchSpace());
       }
     }
 
@@ -993,8 +994,8 @@
       window.removeEventListener('pointermove', onMove);
       window.removeEventListener('pointerup', onUp);
       window.removeEventListener('pointercancel', onCancel);
-      els.trayPanel.classList.remove('drop-ok');
-      els.workbench.classList.remove('drop-active', 'drop-ok');
+      els.trayPanel.classList.remove('claseSoltarcorrecto');
+      els.workbench.classList.remove('claseSoltaractivo', 'claseSoltarcorrecto');
       setSlot(null);
       carrying = null;
     }
@@ -1016,7 +1017,7 @@
         ghost.style.transform = 'none';
         ghost.style.scale = '1';
         setTimeout(function(){
-          el.classList.remove('part-removed');
+          el.classList.remove('clasePiezaretirada');
           state.installed[id] = true;
           removeTrayPart(id);
           sndSnap();
@@ -1070,14 +1071,14 @@
         ghost.style.transition = 'transform 0.3s cubic-bezier(.4,0,.2,1), scale 0.3s ease';
         ghost.style.transform = 'none';
         ghost.style.scale = '1';
-        setTimeout(function(){ el.classList.remove('part-removed'); }, 290);
+        setTimeout(function(){ el.classList.remove('clasePiezaretirada'); }, 290);
         dropGhost(300);
       }
     }
     function onCancel(ev){
       if (ev.pointerId !== carrying.pointerId) return;
       cleanup();
-      if (!fromTray) el.classList.remove('part-removed');
+      if (!fromTray) el.classList.remove('clasePiezaretirada');
       if (ghost.parentNode) ghost.parentNode.removeChild(ghost);
     }
 
@@ -1146,9 +1147,9 @@
     }
     els.successStats.innerHTML =
       'Tiempo ' + fmtTime(state.elapsed) + ' · Errores ' + state.errors +
-      '<br>' + (isRecord ? '<span class="record">¡Nuevo récord!</span>' : 'Mejor: ' + fmtTime(best));
+      '<br>' + (isRecord ? '<span class="claseRecord">¡Nuevo récord!</span>' : 'Mejor: ' + fmtTime(best));
     setTimeout(function(){
-      els.successOverlay.classList.add('show');
+      els.successOverlay.classList.add('claseMostrar');
       sndWin();
     }, 300);
   }
@@ -1165,18 +1166,18 @@
   // ---------- Reiniciar ----------
   function resetPieceVisuals(){
     SCREW_IDS.forEach(function(id){
-      screwEls[id].classList.remove('gone', 'spinning', 'reverse', 'xray-target', 'blocker-flash');
+      screwEls[id].classList.remove('claseAusente', 'claseGirando', 'claseReversa', 'claseRayosobjetivo', 'claseObstaculodestello');
     });
     CONNECTOR_KEYS.forEach(function(key){
-      connectorEls[key].classList.remove('disconnected', 'xray-target', 'blocker-flash');
+      connectorEls[key].classList.remove('claseDesconectado', 'claseRayosobjetivo', 'claseObstaculodestello');
       connectorEls[key].setAttribute('aria-pressed', 'true');
       connectorEls[key].setAttribute('aria-label', 'Flex de ' + CONNECTOR_LABELS[key] + ', conectado');
     });
     PART_IDS.forEach(function(id){
-      parts[id].el.classList.remove('part-removed', 'slot-ok', 'slot-bad', 'xray-target', 'blocker-flash');
+      parts[id].el.classList.remove('clasePiezaretirada', 'claseRanuracorrecto', 'claseRanuramalo', 'claseRayosobjetivo', 'claseObstaculodestello');
     });
-    els.workbench.classList.remove('drop-active', 'drop-ok');
-    els.trayPanel.classList.remove('drop-ok');
+    els.workbench.classList.remove('claseSoltaractivo', 'claseSoltarcorrecto');
+    els.trayPanel.classList.remove('claseSoltarcorrecto');
   }
 
   function clearTray(){
@@ -1204,9 +1205,9 @@
     resetMetrics();
     resetPieceVisuals();
     clearTray();
-    els.app.classList.remove('paused');
-    els.pauseOverlay.classList.remove('show');
-    els.successOverlay.classList.remove('show');
+    els.app.classList.remove('clasePausado');
+    els.pauseOverlay.classList.remove('claseMostrar');
+    els.successOverlay.classList.remove('claseMostrar');
     updateHUD();
   }
 
@@ -1214,7 +1215,7 @@
   function startAssembly(){
     state.goal = 'armar';
     resetMetrics();
-    els.successOverlay.classList.remove('show');
+    els.successOverlay.classList.remove('claseMostrar');
     updateHUD();
   }
 
@@ -1244,7 +1245,7 @@
 
   function toggleHint(){
     state.hint = !state.hint;
-    els.xrayBtn.classList.toggle('active', state.hint);
+    els.xrayBtn.classList.toggle('claseActivo', state.hint);
     els.xrayBtn.setAttribute('aria-pressed', state.hint ? 'true' : 'false');
     updateHintTargets();
   }
@@ -1255,8 +1256,8 @@
     if (p) tick();
     state.paused = p;
     if (!p && state.started) state.lastTick = Date.now();
-    els.app.classList.toggle('paused', p);
-    els.pauseOverlay.classList.toggle('show', p);
+    els.app.classList.toggle('clasePausado', p);
+    els.pauseOverlay.classList.toggle('claseMostrar', p);
   }
   els.pauseBtn.addEventListener('click', function(){ setPaused(true); });
   els.resumeBtn.addEventListener('click', function(){ setPaused(false); });

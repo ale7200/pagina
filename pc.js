@@ -1,7 +1,8 @@
 (function(){
   'use strict';
+  var identificadores = {"app": "identificadorAplicacion", "atxConnector": "identificadorAtxconector", "battery": "identificadorBateria", "batteryConnector": "identificadorBateriaconector", "cameraConnector": "identificadorCamaraconector", "caseStage": "identificadorGabineteescenario", "chargingBoard": "identificadorCargaplaca", "cooler": "identificadorDisipador", "coolerFanConnector": "identificadorDisipadorventiladorconector", "cover": "identificadorTapa", "cpu": "identificadorProcesador", "cpuSocketConnector": "identificadorProcesadorzocaloconector", "cuenta-form": "identificadorCuentaformulario", "cuenta-heading": "identificadorCuentatitulo", "cuenta-message": "identificadorCuentamensaje", "cuenta-submit": "identificadorCuentaenviar", "cuenta-toggle": "identificadorCuentaalternar", "display": "identificadorPantalla", "displayConnector": "identificadorPantallaconector", "earpiece": "identificadorAuricular", "epsConnector": "identificadorEpsconector", "frontCamera": "identificadorFrontalcamara", "frontFan": "identificadorFrontalventilador", "frontFanConnector": "identificadorFrontalventiladorconector", "goalPill": "identificadorObjetivoindicador", "gpu": "identificadorGrafica", "gpuPowerConnector": "identificadorGraficaalimentacionconector", "hintBtn": "identificadorPistaboton", "infoTooltip": "identificadorInformacionayuda", "infoTooltipBody": "identificadorInformacionayudacuerpo", "infoTooltipTitle": "identificadorInformacionayudatitulo", "interconnectConnector": "identificadorInterconexionconector", "logout": "identificadorSalir", "mainboard": "identificadorPlacaprincipal", "messageBar": "identificadorMensajebarra", "midFrame": "identificadorMediomarco", "modeBtn": "identificadorModoboton", "modeBtnText": "identificadorModobotontexto", "modeLabel": "identificadorModoetiqueta", "motherboard": "identificadorPlacabase", "name-field": "identificadorNombrecampo", "nfcCoil": "identificadorNfcbobina", "pauseBtn": "identificadorPausaboton", "pauseOverlay": "identificadorPausasuperposicion", "pcApp": "identificadorComputadoraplicacion", "phoneStage": "identificadorTelefonoescenario", "playAgainBtn": "identificadorJugarnuevoboton", "profile-email": "identificadorPerfilcorreo", "profile-form": "identificadorPerfilformulario", "psu": "identificadorFuente", "ram1": "identificadorMemoria1", "ram2": "identificadorMemoria2", "rearCameras": "identificadorTraserocamaras", "rearFan": "identificadorTraseroventilador", "rearFanConnector": "identificadorTraseroventiladorconector", "resetBtn": "identificadorReinicioboton", "restartBtn": "identificadorReiniciarboton", "resumeBtn": "identificadorContinuarboton", "screw-board-br": "identificadorTornilloplacainferiorderecho", "screw-board-tl": "identificadorTornilloplacasuperiorizquierdo", "screw-charge-left": "identificadorTornillocargaizquierdo", "screw-charge-right": "identificadorTornillocargaderecho", "screw-cooler-a": "identificadorTornillodisipadora", "screw-cooler-b": "identificadorTornillodisipadorb", "screw-cooler-c": "identificadorTornillodisipadorc", "screw-cooler-d": "identificadorTornillodisipadord", "screw-cover-bl": "identificadorTornillotapainferiorizquierdo", "screw-cover-br": "identificadorTornillotapainferiorderecho", "screw-cover-tl": "identificadorTornillotapasuperiorizquierdo", "screw-cover-tr": "identificadorTornillotapasuperiorderecho", "screw-frame-bl": "identificadorTornillomarcoinferiorizquierdo", "screw-frame-br": "identificadorTornillomarcoinferiorderecho", "screw-frame-tl": "identificadorTornillomarcosuperiorizquierdo", "screw-frame-tr": "identificadorTornillomarcosuperiorderecho", "screw-front-a": "identificadorTornillofrontala", "screw-front-b": "identificadorTornillofrontalb", "screw-gpu-a": "identificadorTornillograficaa", "screw-gpu-b": "identificadorTornillograficab", "screw-mobo-a": "identificadorTornilloplacaa", "screw-mobo-b": "identificadorTornilloplacab", "screw-mobo-c": "identificadorTornilloplacac", "screw-mobo-d": "identificadorTornilloplacad", "screw-mobo-e": "identificadorTornilloplacae", "screw-mobo-f": "identificadorTornilloplacaf", "screw-panel-a": "identificadorTornillopanela", "screw-panel-b": "identificadorTornillopanelb", "screw-psu-a": "identificadorTornillofuentea", "screw-psu-b": "identificadorTornillofuenteb", "screw-psu-c": "identificadorTornillofuentec", "screw-psu-d": "identificadorTornillofuented", "screw-rear-a": "identificadorTornillotraseroa", "screw-rear-b": "identificadorTornillotraserob", "screw-speaker-left": "identificadorTornilloaltavozizquierdo", "screw-speaker-right": "identificadorTornilloaltavozderecho", "screw-ssd-a": "identificadorTornillossda", "sideFlex": "identificadorLateralflexible", "sideFlexConnector": "identificadorLateralflexibleconector", "sidePanel": "identificadorLateralpanel", "simTray": "identificadorSimbandeja", "soundBtn": "identificadorSonidoboton", "soundWaves": "identificadorSonidoondas", "speaker": "identificadorAltavoz", "ssd": "identificadorSsd", "stepPill": "identificadorPasoindicador", "successOverlay": "identificadorExitosuperposicion", "successStats": "identificadorExitoestadisticas", "successText": "identificadorExitotexto", "successTitle": "identificadorExitotitulo", "themeBtn": "identificadorTemaboton", "timerPill": "identificadorCronometroindicador", "toolHand": "identificadorHerramientamano", "toolScrewdriver": "identificadorHerramientadestornillador", "toolSpatula": "identificadorHerramientaespatula", "topSensors": "identificadorSuperiorsensores", "topSensorsConnector": "identificadorSuperiorsensoresconector", "tray-screws": "identificadorBandejatornillos", "trayEmpty": "identificadorBandejavacio", "trayList": "identificadorBandejalista", "vibrator": "identificadorVibrador", "workbench": "identificadorTrabajo", "xrayBtn": "identificadorRayosboton"};
 
-  function $(id){ return document.getElementById(id); }
+  function $(id){ return document.getElementById(identificadores[id] || id); }
   var PART_IDS = ['sidePanel','gpu','ram1','ram2','cooler','cpu','ssd','frontFan','rearFan','motherboard','psu'];
   var SCREW_GROUPS = {
     sidePanel:['panel-a','panel-b'], gpu:['gpu-a','gpu-b'], cooler:['cooler-a','cooler-b','cooler-c','cooler-d'],
@@ -53,7 +54,7 @@
 
   var els = {
     app:$('pcApp'), workbench:$('workbench'), stage:$('caseStage'), message:$('messageBar'),
-    trayPanel:document.querySelector('.tray-panel'), trayList:$('trayList'), trayEmpty:$('trayEmpty'),
+    trayPanel:document.querySelector('.claseBandejapanel'), trayList:$('trayList'), trayEmpty:$('trayEmpty'),
     goalPill:$('goalPill'), stepPill:$('stepPill'), timerPill:$('timerPill'), modeLabel:$('modeLabel'),
     modeBtn:$('modeBtn'), hintBtn:$('hintBtn'), pauseBtn:$('pauseBtn'), resetBtn:$('resetBtn'),
     themeBtn:$('themeBtn'), pauseOverlay:$('pauseOverlay'), resumeBtn:$('resumeBtn'),
@@ -83,8 +84,8 @@
     els.infoTooltipTitle.textContent=title;
     els.infoTooltipBody.textContent=info;
     els.infoTooltip.setAttribute('aria-hidden','false');
-    els.infoTooltip.classList.add('visible');
-    el.setAttribute('aria-describedby','infoTooltip');
+    els.infoTooltip.classList.add('claseVisible');
+    el.setAttribute('aria-describedby','identificadorInformacionayuda');
     placeTooltip(x,y);
   }
   function hideTooltip(el){
@@ -92,7 +93,7 @@
     if(tooltipTarget) tooltipTarget.removeAttribute('aria-describedby');
     tooltipTarget=null;
     els.infoTooltip.setAttribute('aria-hidden','true');
-    els.infoTooltip.classList.remove('visible');
+    els.infoTooltip.classList.remove('claseVisible');
   }
   function bindTooltip(el,title,info){
     if(!el || !info) return;
@@ -267,17 +268,17 @@
   function currentSteps(){return STEPS[state.goal];}
   function currentStepIndex(){var s=currentSteps();for(var i=0;i<s.length;i++)if(!s[i].done())return i;return s.length;}
   function doneCount(){return currentSteps().filter(function(s){return s.done();}).length;}
-  function clearHints(){document.querySelectorAll('.xray-target').forEach(function(el){el.classList.remove('xray-target');});}
-  function updateHints(){clearHints();if(!state.hint)return;var s=currentSteps(),i=currentStepIndex();if(i<s.length)s[i].targets().forEach(function(el){if(el)el.classList.add('xray-target');});}
+  function clearHints(){document.querySelectorAll('.claseRayosobjetivo').forEach(function(el){el.classList.remove('claseRayosobjetivo');});}
+  function updateHints(){clearHints();if(!state.hint)return;var s=currentSteps(),i=currentStepIndex();if(i<s.length)s[i].targets().forEach(function(el){if(el)el.classList.add('claseRayosobjetivo');});}
   function updateHUD(){
     var s=currentSteps(),i=currentStepIndex();els.goalPill.textContent=state.goal==='desarmar'?'Desarmar':'Armar';els.stepPill.textContent=doneCount()+'/'+s.length;
     if(!flashTimer){if(i>=s.length)setMessage(state.goal==='desarmar'?'¡Torre desmontada!':'¡Torre armada!');else if(state.mode==='guia')setMessage(s[i].msg());else setMessage('<strong>Modo Libre:</strong> explora la torre; activa Pistas si necesitas ayuda.');}
     updateHints();
   }
   function updateVisuals(){
-    PART_IDS.forEach(function(id){els[id].classList.toggle('part-removed',!state.installed[id]);});
-    SCREW_IDS.forEach(function(id){screwEls[id].classList.toggle('gone',!state.screws[id]);});
-    CONNECTOR_KEYS.forEach(function(id){var el=connectorEls[id];el.classList.toggle('disconnected',!state.connections[id]);el.setAttribute('aria-pressed',state.connections[id]?'true':'false');el.setAttribute('aria-label',CONNECTOR_LABELS[id]+(id==='cpuSocket'?(state.connections[id]?', bloqueada':', liberada'):(state.connections[id]?', conectado':', desconectado')));});
+    PART_IDS.forEach(function(id){els[id].classList.toggle('clasePiezaretirada',!state.installed[id]);});
+    SCREW_IDS.forEach(function(id){screwEls[id].classList.toggle('claseAusente',!state.screws[id]);});
+    CONNECTOR_KEYS.forEach(function(id){var el=connectorEls[id];el.classList.toggle('claseDesconectado',!state.connections[id]);el.setAttribute('aria-pressed',state.connections[id]?'true':'false');el.setAttribute('aria-label',CONNECTOR_LABELS[id]+(id==='cpuSocket'?(state.connections[id]?', bloqueada':', liberada'):(state.connections[id]?', conectado':', desconectado')));});
   }
   function afterChange(){updateHUD();checkGoal();}
   function checkGoal(){
@@ -289,31 +290,31 @@
       els.successTitle.textContent='¡PC armado!';els.successText.textContent='Los módulos, conexiones y tornillos volvieron a sus lugares.';els.playAgainBtn.textContent='Reiniciar simulador';els.restartBtn.hidden=true;
     }
     els.successStats.textContent='Tiempo '+formatTime(state.elapsed)+' · Errores '+state.errors;
-    setTimeout(function(){els.successOverlay.classList.add('show');},250);
+    setTimeout(function(){els.successOverlay.classList.add('claseMostrar');},250);
   }
 
-  function refreshTray(){els.trayEmpty.style.display=els.trayList.querySelector('.tray-item')?'none':'';}
+  function refreshTray(){els.trayEmpty.style.display=els.trayList.querySelector('.claseBandejaelemento')?'none':'';}
   function addTrayScrew(){
     var item=$('tray-screws');
-    if(item){item.querySelector('.count').textContent='×'+state.trayScrewCount;return;}
-    item=document.createElement('div');item.className='tray-item';item.id='tray-screws';item.innerHTML='<span class="swatch" style="background:var(--amber)"></span><span>Tornillos</span><span class="count">×'+state.trayScrewCount+'</span>';
+    if(item){item.querySelector('.claseCantidad').textContent='×'+state.trayScrewCount;return;}
+    item=document.createElement('div');item.className='claseBandejaelemento';item.id='identificadorBandejatornillos';item.innerHTML='<span class="claseMuestra" style="background:var(--amber)"></span><span>Tornillos</span><span class="claseCantidad">×'+state.trayScrewCount+'</span>';
     bindTooltip(item,'Tornillos','Fijaciones retiradas de la torre; instálalas en sus orificios con el destornillador.');els.trayList.appendChild(item);refreshTray();
   }
-  function removeTrayScrew(){var item=$('tray-screws');if(!item)return;if(state.trayScrewCount<=0)item.remove();else item.querySelector('.count').textContent='×'+state.trayScrewCount;refreshTray();}
+  function removeTrayScrew(){var item=$('tray-screws');if(!item)return;if(state.trayScrewCount<=0)item.remove();else item.querySelector('.claseCantidad').textContent='×'+state.trayScrewCount;refreshTray();}
   function addTrayPart(id){
-    if(trayItems[id])return;var p=parts[id],item=document.createElement('div');item.className='tray-item piece';item.tabIndex=0;item.setAttribute('role','button');item.setAttribute('aria-label',p.label+': arrastra para volver a instalar');item.innerHTML='<span class="swatch" style="background:'+p.color+'"></span><span>'+p.label+'</span><span aria-hidden="true">⠿</span>';
+    if(trayItems[id])return;var p=parts[id],item=document.createElement('div');item.className='claseBandejaelemento clasePieza';item.tabIndex=0;item.setAttribute('role','button');item.setAttribute('aria-label',p.label+': arrastra para volver a instalar');item.innerHTML='<span class="claseMuestra" style="background:'+p.color+'"></span><span>'+p.label+'</span><span aria-hidden="true">⠿</span>';
     bindTooltip(item,p.label,PART_INFO[id]);item.addEventListener('pointerdown',function(e){if(state.paused||e.button>0)return;e.preventDefault();selectTool('mano');startCarry(id,e,true);});
     els.trayList.appendChild(item);trayItems[id]=item;refreshTray();
   }
   function removeTrayPart(id){var item=trayItems[id];if(item){item.remove();delete trayItems[id];refreshTray();}}
 
-  var toolButtons=document.querySelectorAll('.tool-btn');
-  function selectTool(name){state.tool=name;els.app.setAttribute('data-tool',name);toolButtons.forEach(function(btn){var on=btn.getAttribute('data-tool')===name;btn.classList.toggle('selected',on);btn.setAttribute('aria-pressed',on?'true':'false');});}
+  var toolButtons=document.querySelectorAll('.claseHerramientaboton');
+  function selectTool(name){state.tool=name;els.app.setAttribute('data-tool',name);toolButtons.forEach(function(btn){var on=btn.getAttribute('data-tool')===name;btn.classList.toggle('claseSeleccionado',on);btn.setAttribute('aria-pressed',on?'true':'false');});}
   toolButtons.forEach(function(btn){btn.addEventListener('click',function(){selectTool(btn.getAttribute('data-tool'));});});
 
   function registerError(){state.errors++;}
-  function flashBlocked(el){registerError();el.classList.add('blocked-shake');setTimeout(function(){el.classList.remove('blocked-shake');},450);}
-  function flashBlockers(list){list.forEach(function(el){if(!el)return;el.classList.add('blocker-flash');setTimeout(function(){el.classList.remove('blocker-flash');},750);});}
+  function flashBlocked(el){registerError();el.classList.add('claseBloqueadosacudida');setTimeout(function(){el.classList.remove('claseBloqueadosacudida');},450);}
+  function flashBlockers(list){list.forEach(function(el){if(!el)return;el.classList.add('claseObstaculodestello');setTimeout(function(){el.classList.remove('claseObstaculodestello');},750);});}
   function connectorAccessBlock(key){
     if(state.installed.sidePanel)return 'Retira primero el panel lateral para acceder al interior.';
     if(key==='gpuPower'&&(!state.installed.gpu||!state.installed.motherboard))return 'Instala la gráfica y la placa base para acceder al cable.';
@@ -328,7 +329,7 @@
     if(state.paused)return;
     if(state.tool!=='espatula'){flashBlocked(el);flash('Selecciona la <strong>espátula</strong> para manipular '+CONNECTOR_LABELS[key]+'.');return;}
     var block=connectorAccessBlock(key);if(block){flashBlocked(el);flash(block);return;}
-    startClock();state.connections[key]=!state.connections[key];el.classList.toggle('disconnected',!state.connections[key]);
+    startClock();state.connections[key]=!state.connections[key];el.classList.toggle('claseDesconectado',!state.connections[key]);
     el.setAttribute('aria-pressed',state.connections[key]?'true':'false');el.setAttribute('aria-label',CONNECTOR_LABELS[key]+(state.connections[key]?', conectado':', desconectado'));afterChange();
   }
   CONNECTOR_KEYS.forEach(function(key){var el=connectorEls[key];el.addEventListener('pointerdown',function(e){e.preventDefault();e.stopPropagation();toggleConnector(key,el);});el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();toggleConnector(key,el);}});});
@@ -337,43 +338,43 @@
     var timer=null,holding=false;
     el.addEventListener('pointerdown',function(e){
       if(state.paused)return;e.stopPropagation();if(state.tool!=='destornillador'){flashBlocked(el);flash('Selecciona el <strong>destornillador</strong> para manipular este tornillo.');return;}
-      var installing=!state.screws[id];if(installing&&state.trayScrewCount<=0){flash('No quedan tornillos en la bandeja.');return;}startClock();holding=true;el.style.setProperty('--hold','550ms');el.classList.toggle('reverse',installing);el.classList.add('spinning');
+      var installing=!state.screws[id];if(installing&&state.trayScrewCount<=0){flash('No quedan tornillos en la bandeja.');return;}startClock();holding=true;el.style.setProperty('--hold','550ms');el.classList.toggle('claseReversa',installing);el.classList.add('claseGirando');
       timer=setTimeout(function(){timer=null;holding=false;finishScrew(id,el,installing);},550);
     });
-    function cancel(){if(timer){clearTimeout(timer);timer=null;}if(holding){holding=false;el.classList.remove('spinning','reverse');}}
+    function cancel(){if(timer){clearTimeout(timer);timer=null;}if(holding){holding=false;el.classList.remove('claseGirando','claseReversa');}}
     el.addEventListener('pointerup',cancel);el.addEventListener('pointerleave',cancel);el.addEventListener('pointercancel',cancel);
   }
   function finishScrew(id,el,installing){
-    el.classList.remove('spinning','reverse');
-    if(installing){if(state.screws[id]||!state.trayScrewCount)return;state.screws[id]=true;state.trayScrewCount--;el.classList.remove('gone');removeTrayScrew();}
-    else{if(!state.screws[id])return;state.screws[id]=false;state.trayScrewCount++;el.classList.add('gone');addTrayScrew();}
+    el.classList.remove('claseGirando','claseReversa');
+    if(installing){if(state.screws[id]||!state.trayScrewCount)return;state.screws[id]=true;state.trayScrewCount--;el.classList.remove('claseAusente');removeTrayScrew();}
+    else{if(!state.screws[id])return;state.screws[id]=false;state.trayScrewCount++;el.classList.add('claseAusente');addTrayScrew();}
     afterChange();
   }
   SCREW_IDS.forEach(function(id){attachScrew(id,screwEls[id]);});
 
-  function makeGhost(el,rect){var g=el.cloneNode(true);g.removeAttribute('id');g.querySelectorAll('[id]').forEach(function(kid){kid.removeAttribute('id');});g.classList.remove('part-removed','slot-ok','slot-bad','xray-target','blocked-shake');g.classList.add('drag-ghost');Object.assign(g.style,{left:rect.left+'px',top:rect.top+'px',width:rect.width+'px',height:rect.height+'px',right:'auto',bottom:'auto',transform:'none',opacity:'1'});document.body.appendChild(g);return g;}
+  function makeGhost(el,rect){var g=el.cloneNode(true);g.removeAttribute('id');g.querySelectorAll('[id]').forEach(function(kid){kid.removeAttribute('id');});g.classList.remove('clasePiezaretirada','claseRanuracorrecto','claseRanuramalo','claseRayosobjetivo','claseBloqueadosacudida');g.classList.add('claseArrastrefantasma');Object.assign(g.style,{left:rect.left+'px',top:rect.top+'px',width:rect.width+'px',height:rect.height+'px',right:'auto',bottom:'auto',transform:'none',opacity:'1'});document.body.appendChild(g);return g;}
   var carrying=null;
   function startCarry(id,e,fromTray){
     if(carrying)return;var p=parts[id],el=p.el,rect=el.getBoundingClientRect(),cx=rect.left+rect.width/2,cy=rect.top+rect.height/2;
     var grabX=fromTray?0:e.clientX-cx,grabY=fromTray?0:e.clientY-cy,ghost=makeGhost(el,rect),scale=p.carryScale||.9;
-    startClock();if(!fromTray)el.classList.add('part-removed');ghost.style.transition='scale .14s ease';ghost.style.scale=String(scale);carrying={id:id,ghost:ghost,pointerId:e.pointerId};if(!fromTray)els.workbench.classList.add('drop-active');
+    startClock();if(!fromTray)el.classList.add('clasePiezaretirada');ghost.style.transition='scale .14s ease';ghost.style.scale=String(scale);carrying={id:id,ghost:ghost,pointerId:e.pointerId};if(!fromTray)els.workbench.classList.add('claseSoltaractivo');
     var tolerance=Math.max(50,Math.min(rect.width,rect.height)*.5),lastX=e.clientX,lastY=e.clientY;
     function place(x,y){lastX=x;lastY=y;ghost.style.transform='translate('+(x-grabX-cx)+'px,'+(y-grabY-cy)+'px)';}
     function nearSlot(){return Math.hypot((lastX-grabX)-cx,(lastY-grabY)-cy)<tolerance;}
     function inRect(pointX,pointY,r,inset){inset=inset||0;return pointX>=r.left-inset&&pointX<=r.right+inset&&pointY>=r.top-inset&&pointY<=r.bottom+inset;}
     function overTray(){return inRect(lastX,lastY,els.trayPanel.getBoundingClientRect(),0);}
     function overBench(){if(!inRect(lastX,lastY,els.workbench.getBoundingClientRect(),0))return false;if(inRect(lastX,lastY,els.stage.getBoundingClientRect(),10))return false;if(inRect(lastX,lastY,els.message.getBoundingClientRect(),6))return false;return true;}
-    function slot(cls){el.classList.toggle('slot-ok',cls==='ok');el.classList.toggle('slot-bad',cls==='bad');}
-    function cleanup(){window.removeEventListener('pointermove',move);window.removeEventListener('pointerup',up);window.removeEventListener('pointercancel',cancel);els.workbench.classList.remove('drop-active','drop-ok');els.trayPanel.classList.remove('drop-ok');slot(null);carrying=null;}
+    function slot(cls){el.classList.toggle('claseRanuracorrecto',cls==='ok');el.classList.toggle('claseRanuramalo',cls==='bad');}
+    function cleanup(){window.removeEventListener('pointermove',move);window.removeEventListener('pointerup',up);window.removeEventListener('pointercancel',cancel);els.workbench.classList.remove('claseSoltaractivo','claseSoltarcorrecto');els.trayPanel.classList.remove('claseSoltarcorrecto');slot(null);carrying=null;}
     function removeGhost(ms){setTimeout(function(){if(ghost.parentNode)ghost.remove();},ms);}
-    function move(ev){if(!carrying||ev.pointerId!==carrying.pointerId)return;place(ev.clientX,ev.clientY);if(fromTray){var near=nearSlot();slot(near?(p.installBlock()?'bad':'ok'):null);}else{els.trayPanel.classList.toggle('drop-ok',overTray());els.workbench.classList.toggle('drop-ok',overBench());}}
+    function move(ev){if(!carrying||ev.pointerId!==carrying.pointerId)return;place(ev.clientX,ev.clientY);if(fromTray){var near=nearSlot();slot(near?(p.installBlock()?'bad':'ok'):null);}else{els.trayPanel.classList.toggle('claseSoltarcorrecto',overTray());els.workbench.classList.toggle('claseSoltarcorrecto',overBench());}}
     function up(ev){if(!carrying||ev.pointerId!==carrying.pointerId)return;var onTray=!fromTray&&overTray(),onBench=!fromTray&&overBench(),near=fromTray&&nearSlot(),block=fromTray&&near?p.installBlock():null;cleanup();
-      if(fromTray&&near&&!block){ghost.style.transition='transform .18s ease,scale .18s ease';ghost.style.transform='none';ghost.style.scale='1';setTimeout(function(){el.classList.remove('part-removed');state.installed[id]=true;removeTrayPart(id);afterChange();},170);removeGhost(200);return;}
+      if(fromTray&&near&&!block){ghost.style.transition='transform .18s ease,scale .18s ease';ghost.style.transform='none';ghost.style.scale='1';setTimeout(function(){el.classList.remove('clasePiezaretirada');state.installed[id]=true;removeTrayPart(id);afterChange();},170);removeGhost(200);return;}
       if(!fromTray&&(onTray||onBench)){ghost.style.transition='transform .25s ease,scale .25s ease,opacity .25s ease';ghost.style.scale='.45';ghost.style.opacity='0';setTimeout(function(){state.installed[id]=false;addTrayPart(id);afterChange();},onTray?270:170);removeGhost(onTray?300:220);return;}
       if(fromTray){if(near&&block){registerError();flash(block);flashBlockers(p.installBlockers());}ghost.style.transition='transform .25s ease,scale .25s ease,opacity .25s ease';ghost.style.scale='.25';ghost.style.opacity='0';removeGhost(280);}
-      else{ghost.style.transition='transform .25s ease,scale .25s ease';ghost.style.transform='none';ghost.style.scale='1';setTimeout(function(){el.classList.remove('part-removed');},250);removeGhost(270);}
+      else{ghost.style.transition='transform .25s ease,scale .25s ease';ghost.style.transform='none';ghost.style.scale='1';setTimeout(function(){el.classList.remove('clasePiezaretirada');},250);removeGhost(270);}
     }
-    function cancel(ev){if(!carrying||ev.pointerId!==carrying.pointerId)return;cleanup();if(!fromTray)el.classList.remove('part-removed');ghost.remove();}
+    function cancel(ev){if(!carrying||ev.pointerId!==carrying.pointerId)return;cleanup();if(!fromTray)el.classList.remove('clasePiezaretirada');ghost.remove();}
     window.addEventListener('pointermove',move);window.addEventListener('pointerup',up);window.addEventListener('pointercancel',cancel);place(e.clientX,e.clientY);
   }
   PART_IDS.forEach(function(id){parts[id].el.addEventListener('pointerdown',function(e){if(state.paused||e.button>0||!state.installed[id])return;if(e.target.closest&&e.target.closest('.screw,.connector'))return;if(state.tool!=='mano'){flashBlocked(parts[id].el);flash('Selecciona <strong>Mano libre</strong> para mover la pieza.');return;}var block=parts[id].removeBlock();if(block){flashBlocked(parts[id].el);flash(block);flashBlockers(parts[id].removeBlockers());return;}e.preventDefault();startCarry(id,e,false);});});
@@ -381,12 +382,12 @@
   function reset(){
     PART_IDS.forEach(function(id){state.installed[id]=true;});SCREW_IDS.forEach(function(id){state.screws[id]=true;});CONNECTOR_KEYS.forEach(function(id){state.connections[id]=true;});
     state.trayScrewCount=0;state.started=false;state.elapsed=0;state.errors=0;state.paused=false;state.finished=false;state.goal='desarmar';state.hint=false;clearTimeout(flashTimer);flashTimer=null;
-    Object.keys(trayItems).forEach(function(id){removeTrayPart(id);});$('tray-screws')&&$('tray-screws').remove();updateVisuals();els.app.classList.remove('paused');els.pauseOverlay.classList.remove('show');els.successOverlay.classList.remove('show');updateHUD();tick();
+    Object.keys(trayItems).forEach(function(id){removeTrayPart(id);});$('tray-screws')&&$('tray-screws').remove();updateVisuals();els.app.classList.remove('clasePausado');els.pauseOverlay.classList.remove('claseMostrar');els.successOverlay.classList.remove('claseMostrar');updateHUD();tick();
   }
-  function startAssembly(){state.goal='armar';state.started=false;state.elapsed=0;state.errors=0;state.finished=false;els.successOverlay.classList.remove('show');updateHUD();tick();}
-  function setPaused(v){if(v===state.paused)return;state.paused=v;els.app.classList.toggle('paused',v);els.pauseOverlay.classList.toggle('show',v);if(!v&&state.started)state.lastTick=Date.now();}
+  function startAssembly(){state.goal='armar';state.started=false;state.elapsed=0;state.errors=0;state.finished=false;els.successOverlay.classList.remove('claseMostrar');updateHUD();tick();}
+  function setPaused(v){if(v===state.paused)return;state.paused=v;els.app.classList.toggle('clasePausado',v);els.pauseOverlay.classList.toggle('claseMostrar',v);if(!v&&state.started)state.lastTick=Date.now();}
   els.modeBtn.addEventListener('click',function(){state.mode=state.mode==='guia'?'libre':'guia';els.modeBtn.textContent=state.mode==='guia'?'Modo Guía':'Modo Libre';els.modeBtn.setAttribute('aria-pressed',state.mode==='guia'?'true':'false');els.modeLabel.textContent=state.mode==='guia'?'Torre ATX modular · guía de 26 pasos':'Torre ATX modular · modo libre';updateHUD();});
-  els.hintBtn.addEventListener('click',function(){state.hint=!state.hint;els.hintBtn.classList.toggle('active',state.hint);els.hintBtn.setAttribute('aria-pressed',state.hint?'true':'false');updateHints();});
+  els.hintBtn.addEventListener('click',function(){state.hint=!state.hint;els.hintBtn.classList.toggle('claseActivo',state.hint);els.hintBtn.setAttribute('aria-pressed',state.hint?'true':'false');updateHints();});
   els.pauseBtn.addEventListener('click',function(){setPaused(true);});els.resumeBtn.addEventListener('click',function(){setPaused(false);});els.resetBtn.addEventListener('click',reset);els.restartBtn.addEventListener('click',reset);
   els.playAgainBtn.addEventListener('click',function(){if(state.goal==='desarmar')startAssembly();else reset();});
   els.themeBtn.addEventListener('click',function(){var dark=document.documentElement.getAttribute('data-theme')!=='light';document.documentElement.setAttribute('data-theme',dark?'light':'dark');});
